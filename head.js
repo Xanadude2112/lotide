@@ -1,7 +1,5 @@
 const head = function (arrItem){
-  for(const item of arrItem){
     return arrItem[0];
-  }
 };
 
 const assertEqual = function(actual, expected) {
