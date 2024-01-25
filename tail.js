@@ -14,5 +14,7 @@ const tail = function(arr) {
 };
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
+const shapes = ["circle", "square", "triangle", "star"]
+assertEqual(tail(words).length, 2);
 assertEqual(words.length, 3);
+assertEqual(tail(shapes).length, 3);
