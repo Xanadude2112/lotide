@@ -21,3 +21,5 @@ return true //will always return true unless false --> will be incorrect if oppo
 
 assertEqual(eqArrays(["animal"], ["animal"]), true);
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 2, 3], [1, 2, "3"]), true);
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), true);
