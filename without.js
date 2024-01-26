@@ -18,8 +18,8 @@ const assertArraysEqual = function (arr1, arr2) {
   }
 };
 
-let wantedItems = [];
 const without = function(source, itemsToRemove){
+  let wantedItems = [];
   for(let i = 0; i < source.length; i++){
     if(!itemsToRemove.includes(source[i])){
       wantedItems.push(source[i])
@@ -28,6 +28,10 @@ const without = function(source, itemsToRemove){
   return wantedItems;
 };
 
+const words = ["hello", "world", "lighthouse"];
 const candy = ["mars", "kitkat", "aero", "glossettes", "airheads", "rockets", "oh henry", "popeye"];
+console.log(without(words, ["lighthouse"]));
 console.log(without(candy, ["glossettes", "rockets", "mars"]));
-assertArraysEqual(candy, ["mars", "kitkat", "aero", "glossettes", "airheads", "rockets", "oh henry", "popeye"]);
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+assertArraysEqual(candy, ["mars", "kitkat", "aero", "glossettes", "airheads", "rockets", "oh henry", "popeye"])
+
