@@ -20,26 +20,35 @@ const assertArraysEqual = function (arr1, arr2) {
 
 const middle = function(array) {
   let answer = [];
-  const length = array.length
-    if(length % 2 !== 0){
-      const middleOdd = Math.floor(length / 2);
-      answer.push(array[middleOdd]);
-    } else {
-      const middleEven1 = length / 2 - 1;
-      const middleEven2 = length / 2
-      answer.push(array[middleEven1]);
-      answer.push(array[middleEven2]);
-    }
-  return answer;
+  const length = array.length;
+  if(length === 0){
+    return [];
+  }
+  if(length % 2 !== 0){
+    const middleOdd = Math.floor(length / 2);
+    answer.push(array[middleOdd]);
+  } else{
+    const middleEven1 = length / 2 - 1;
+    const middleEven2 = length / 2;
+    answer.push(array[middleEven1]);
+    answer.push(array[middleEven2]);
+  }
+  return answer
 };
 
 const first = [1, 2, 3];
 const second = [1, 2, 3, 4, 5];
 const third = [1, 2, 3, 4, 5, 6];
+const fourth = [1];
+const fifth = [];
 console.log(middle(first));
 console.log(middle(second));
 console.log(middle(third));
+console.log(middle(fourth));
+console.log(middle(fifth));
 
 assertArraysEqual(middle(first),[2])
 assertArraysEqual(middle(second),[3])
 assertArraysEqual(middle(third),[3, 4])
+assertArraysEqual(middle(fourth),[1]);
+assertArraysEqual(middle(fifth),[]);
