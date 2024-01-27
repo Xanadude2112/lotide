@@ -1,4 +1,3 @@
-
 const tail = function(arr) {
   if (arr.length <= 1) {
     return [];
