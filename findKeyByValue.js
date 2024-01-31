@@ -2,7 +2,7 @@ const assertEqual = function(actual, expected) {
   if (actual !== expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   } else {
-    console.log(`✅✅✅ Assertion Passed: The object keyss match!`);
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}!`);
   }
 };
 
@@ -24,4 +24,4 @@ const findKeyByValue = (obj, value) => {
 
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "sitcom");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy");
