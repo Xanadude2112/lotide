@@ -1,9 +1,17 @@
 const assertEqual = function(actual, expected) {
-  if (actual == expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} == ${expected}`);
+  const actualKey = Object.keys(actual);
+  const expectKey = Object.keys(expected);
+  if (actualKey.length !== expectKey.length) {
+    console.log(`🛑🛑🛑 Assertion Failed: Object keys count does not match`);
     return;
   }
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} != ${expected} `);
+  for (const key of actualKey) {
+    if (actual[key] !== expected[key]) {
+      console.log(`🛑🛑🛑 Assertion Failed: ${actual[key]} !== ${expected[key]} error found at ${key}`);
+      return;
+    }
+  }
+  console.log(`✅✅✅ Assertion Passed: The objects match!`);
 };
 
 const countLetters = (sentence) => {
