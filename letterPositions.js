@@ -1,6 +1,6 @@
 const eqArrays = function(obj1, obj2){
-  actualValue = Object.values(obj1);
-  expectValue = Object.values(obj2);
+  let actualValue = obj1;
+  let expectValue = obj2;
   if(actualValue.length !== expectValue.length){
     return false;     //these have to be false because they will only be false when the loop encounters something different
   }
