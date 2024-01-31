@@ -14,9 +14,9 @@ return true //will always return true unless false --> will be incorrect if oppo
 
 const assertArraysEqual = function (arr1, arr2) {
   if (!eqArrays(arr1, arr2)) {
-    console.log(`🛑❌🛑 Assertion Failed: the contents of the objects dont match!`);
+    console.log(`🛑❌🛑 Assertion Failed: ${arr1} does not match ${arr2}`);
   } else {
-    console.log(`✅🟢✅ Assertion Passed: the contents of the objects match!`);
+    console.log(`✅🟢✅ Assertion Passed: ${arr1} matches ${arr2}`);
   }
 };
 
