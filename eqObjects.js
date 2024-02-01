@@ -29,7 +29,7 @@ if(key1.length !== key2.length){
 
 for(const key of key1){
   if(Array.isArray(object1[key]) && Array.isArray(object2[key])){
-    if(!eqArrays(object1, object2)){
+    if(!eqArrays(object1[key], object2[key])){
       return false;
     }
   } else if(object1[key] !== object2[key]){
