@@ -10,7 +10,7 @@ const eqArrays = function (arr1, arr2) {
       return false; //these have to be false because they will only be false when the loop encounters something different
     }
   }
-  return true; //will always return true unless false --> will be incorrect if opposite
+  return true; //The function returns true if all elements in both arrays are equal, otherwise it returns false
 };
 
 const assertArraysEqual = function (arr1, arr2) {
@@ -24,7 +24,7 @@ const assertArraysEqual = function (arr1, arr2) {
 const map = (arr, cb) => { // map as an arrow function
   const results = [];
   for(let item of arr){
-    results.push(cb((item))); //pushing the called back items into the empty array results
+    results.push(cb(item)); //pushing the called back items into the empty array results
   }
   return results
 }
