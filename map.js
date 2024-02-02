@@ -21,19 +21,19 @@ const assertArraysEqual = function (arr1, arr2) {
   }
 };
 
-const map = (arr, cb) => {
+const map = (arr, cb) => { // map as an arrow function
   const results = [];
   for(let item of arr){
-    results.push(cb((item)));
+    results.push(cb((item))); //pushing the called back items into the empty array results
   }
   return results
 }
 
-const firstCallback = (str) => str.split("").reverse().join("");
-const secondCallback = (num) => num * 2;
+const firstCallback = (str) => str.split("").reverse().join(""); // function to reverse the letter positioning of the words of an array
+const secondCallback = (num) => num * 2; // function to multiply the numbers of an array by 2
 
 
 assertArraysEqual(map(words, firstCallback), [ 'dnuorg', 'lortnoc', 'ot', 'rojam', 'mot' ]);
 assertArraysEqual(map(numbers, secondCallback), [ 2,  4,  6,  8, 10, 12, 14, 16, 18, 20 ]);
-assertArraysEqual(numbers, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-assertArraysEqual(words, ["ground", "control", "to", "major", "tom"]);
+assertArraysEqual(numbers, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]); //to make sure the original array was left unchanged
+assertArraysEqual(words, ["ground", "control", "to", "major", "tom"]); //to make sure the original array was left unchanged
