@@ -1,6 +1,11 @@
+const assert = require('chai').assert;
 const assertEqual = require('../assertEqual');
 
-assertEqual("Lighthouse Labs", "Lighthouse Labs");
-assertEqual(1, 1);
-assertEqual(2, 2);
-assertEqual("Elephant", "Elephant");
+describe("#assertEqual", () => {
+  it("returns 'Lighthouse Labs' for 'Lighthouse Labs'", () => {
+    assert.strictEqual(assertEqual('Lighthouse Labs', 'Lighthouse Labs'), 'Lighthouse Labs');
+  });
+  it("returns false if 'Lighthouse Labs' is not 'Lighthouse Labs'", () => {
+    assert.strictEqual(assertEqual('Lighthouse Lbs', 'Lighthouse Labs'), false);
+  });
+});
