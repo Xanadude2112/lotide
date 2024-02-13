@@ -1,19 +1,25 @@
+const assert = require("chai").assert;
 const middle = require('../middle');
-const assertArraysEqual = require('../assertArraysEqual');
 
-const first = [1, 2, 3];
-const second = [1, 2, 3, 4, 5];
-const third = [1, 2, 3, 4, 5, 6];
-const fourth = [1];
-const fifth = [];
-console.log(middle(first));
-console.log(middle(second));
-console.log(middle(third));
-console.log(middle(fourth));
-console.log(middle(fifth));
-
-assertArraysEqual(middle(first),[2])
-assertArraysEqual(middle(second),[3])
-assertArraysEqual(middle(third),[3, 4])
-assertArraysEqual(middle(fourth),[]);
-assertArraysEqual(middle(fifth),[]);
+describe("#middle", () => {
+  it("returns [2] for [1,2,3]", () => {
+    const first = [1, 2, 3];
+    assert.deepEqual(middle(first), [2]);
+  });
+  it("returns [3] for [1, 2, 3, 4, 5]", () => {
+    const second = [1, 2, 3, 4, 5];
+    assert.deepEqual(middle(second), [3]);
+  });
+  it("returns [3,4] for [1, 2, 3, 4, 5,6]", () => {
+    const third = [1, 2, 3, 4, 5, 6];
+    assert.deepEqual(middle(third), [3,4]);
+  });
+  it("returns [] when given an array with 1 item or less within it", () => {
+    const fourth = [1];
+    assert.deepEqual(middle(fourth), []);
+  });
+  it("returns [] when given an array with 1 item or less within it", () => {
+    const fifth = [];
+    assert.deepEqual(middle(fifth), []);
+  });
+});
