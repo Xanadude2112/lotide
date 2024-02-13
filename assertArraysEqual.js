@@ -1,10 +1,3 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-    return;
-  }
-  console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected} `);
-};
 const eqArrays = function (arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false; //these have to be false because they will only be false when the loop encounters something different
@@ -24,8 +17,6 @@ const assertArraysEqual = function (arr1, arr2) {
     console.log(`✅🟢✅ Assertion Passed: ${arr1} is equal to ${arr2}!`);
   }
 };
-assertArraysEqual([1, 2, "'3'"], [1, 2, "'3'"]);
-assertArraysEqual([1, 2, 3], [1, 2, "'3'"]);
-assertArraysEqual(["triangle", "square", "circle"], ["triangle","square", "circle"]);
-assertArraysEqual([1, 2, 3], [1, 2, 3, 4]);
 
+module.exports = assertArraysEqual;
+module.exports = eqArrays
