@@ -9,7 +9,6 @@ for(let i = 0; i < arr1.length; i++){
 }
 return true //will always return true unless false --> will be incorrect if opposite
 };
-
 module.exports = eqArrays;
 
 
