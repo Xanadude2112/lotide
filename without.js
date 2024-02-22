@@ -35,3 +35,4 @@ console.log(without(candy, ["glossettes", "rockets", "mars"]));
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 assertArraysEqual(candy, ["mars", "kitkat", "aero", "glossettes", "airheads", "rockets", "oh henry", "popeye"])
 
+module.export = {without}

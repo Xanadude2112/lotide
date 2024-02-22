@@ -31,3 +31,5 @@ assertEqual(findKey({
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 3), "Akaleri");//x represents the object--> when obj.stars is 3 return the key at that value
+
+module.exports = {findKey}

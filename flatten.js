@@ -34,3 +34,5 @@ console.log(flatten(nested));
 // // const flattened = flatten(nested);
 // console.log(nested);
 assertArraysEqual(flatten(nested), [1, 2, 3, 4, 5, 6]);
+
+module.exports = {flatten}
