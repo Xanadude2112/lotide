@@ -16,4 +16,4 @@ const middle = function(array) {
   return answer
 };
 
-module.exports = middle;
+module.exports = {middle};
