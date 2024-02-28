@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const assertArraysEqual = require('../assertArraysEqual');
+const {assertArraysEqual} = require('../assertArraysEqual');
 
 describe("#assertArraysEqual", () => {
   it("returns true when [1, 2, '3'] is [1, 2, '3']", () => {

@@ -12,7 +12,7 @@ This project was created and published by me, Thomas Azran, as part of my learni
 
 **Location**
 
-`https://www.npmjs.com/package/@xanadude2112/lotide?activeTab=readme  `
+`https://www.npmjs.com/package/@xanadude2112/lotide?activeTab=readme`
 
 **Install it:**
 

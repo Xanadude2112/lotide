@@ -1,23 +1,4 @@
-const eqArrays = function(arr1, arr2){
-  if(arr1.length !== arr2.length){
-    return false;     //Return false if any corresponding elements in the arrays are not equal  *ARRAYS ARE NOT EQUAL*
-  }
-for(let i = 0; i < arr1.length; i++){
- if(arr1[i] !== arr2[i]){
-  return false //Return false if any corresponding elements in the arrays are not equal *ARRAYS ARE NOT EQUAL*
- }
-}
-return true //will always return true unless false --> will be incorrect if opposite *ARRAYS ARE EQUAL*
-};
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-    return;
-  }
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected} `);
-  
-};
+const {eqArrays} = require("./eqArrays");
 
 const eqObjects = function(object1, object2) {
   const key1 = Object.keys(object1);
@@ -38,33 +19,5 @@ for(const key of key1){
 }
 return true;
 };
-
-const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject= { size: "medium", color: "red" };
-assertEqual(eqObjects(shirtObject , anotherShirtObject), true);
-
-const longSleeveShirtObject= { size: "medium", color: "red", sleeveLength: "long" };
-assertEqual(eqObjects(shirtObject , longSleeveShirtObject), false);
-
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject), true); // => true
-
-const longSleeveMultiColorShirtObject= { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-assertEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false); // => false
-
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-console.log(eqObjects(ab, ba));
-
-const abc = { a: "1", b: "2", c: "3" };
-console.log(eqObjects(ab, abc));
-
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-console.log("Test 3:", eqObjects(cd, dc));
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-console.log("Test 4:", eqObjects(cd, cd2));
 
 module.exports = {eqObjects}

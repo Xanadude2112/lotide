@@ -1,5 +1,5 @@
 const assert = require("chai").assert;
-const eqArrays = require('../eqArrays');
+const {eqArrays} = require('../eqArrays');
 
 describe("#eqArrays", () => {
   it("returns true when ['animal'] is ['animal']", () => {

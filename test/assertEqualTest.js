@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const assertEqual = require('../assertEqual');
+const {assertEqual} = require('../assertEqual');
 
 describe("#assertEqual", () => {
   it("returns 'Lighthouse Labs' for 'Lighthouse Labs'", () => {

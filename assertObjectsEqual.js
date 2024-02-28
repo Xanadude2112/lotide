@@ -4,7 +4,7 @@ const eqArrays = function (arr1, arr2) {
   }
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
-      return false; //Return false if any corresponding elements in the arrays are not equal *ARRAYS ARE NOT EQUAL*
+      return false; //Element doesn't match, arrays not equal
     }
   }
   return true; //will always return true unless false --> will be incorrect if opposite *ARRAYS ARE EQUAL*
